@@ -1,0 +1,394 @@
+<html>
+    <head>
+        <title>wedding</title>
+        <style>
+            /* body {
+            font-family: 'Arial', sans-serif;
+            background: url('imgbck3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            animation: fadeIn 3s ease-in-out;
+            overflow-x: hidden;
+        }*/
+
+        /* Home Section */
+#home {
+    background: url('imgbck1.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the background image covers the entire section */
+    padding: 150px 20px; /* Add some padding for the content to be visible */
+}
+
+/* Add your existing styles here */
+#countdown {
+            font-size: 1.5em;
+            color: #03f6a2;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInText 2s ease-out;
+        }
+
+/* Wedding Details Section */
+#details {
+    background: url('imgbck2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white; /* Ensure text is readable on the background */
+}
+
+/* Location Section */
+#location {
+    background: url('imgbckl.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+}
+
+/* Gallery Section */
+#gallery{
+    background: url('imgbck3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+}
+
+/* Footer Section */
+footer {
+    background: url('imgbckf1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e1c8b5;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ensure images look good on all screen sizes */
+@media screen and (max-width: 768px) {
+    #home, #details, #location, #gallery {
+        background-position: top center;
+        background-size: cover; /* Keep background size to cover the section */
+    }
+
+    footer {
+        background-size: cover; /* Maintain footer background image size */
+    }
+}
+
+
+
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+            
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                top: -100px;
+            }
+            to {
+                top: 0;
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e1c8b5;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-top: 15px;
+            text-align: center;
+            color: #09b7f7;
+            animation: fadeInText 2s ease-out;
+        }
+        p {
+            font-size: 1em;   
+            text-align: center;
+            color: #cdfbeb;
+            animation: fadeInText 2s ease-out;
+        }
+
+        #details p {
+            font-size: 1em;   
+            text-align: center;
+            color: #f60ee2;
+            animation: fadeInText 2s ease-out;
+        }
+
+        #location p {
+            font-size: 1em;   
+            text-align: center;
+            color: #0d0d0d;
+            animation: fadeInText 2s ease-out;
+        }
+
+        @keyframes fadeInText {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+         /* Photo Gallery Section */
+         #gallery {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+            gap: 20px; /* Space between images */
+            padding: 0 20px;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 400px; /* Set a fixed height */
+            object-fit: cover; /* Ensure images cover the space without distortion */
+            max-width: 100%; /* Prevent images from exceeding their container's width */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+            margin-top: 20px;         
+        }
+
+        .center-image img {
+            width: 100%;              
+            max-width: 600px;         
+            height: auto;             
+            border-radius: 10px;      
+        }
+        #details h2{
+            text-align: center;
+            color:#f9b6cd;
+        }
+
+    /* Styling for button */
+#location a button {
+    background-color: #928c88; /* Green background */
+    border: none;
+    color: #efe499;
+    padding: 15px 40px; /* Increased padding for a larger button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em; /* Larger font size for visibility */
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    width: auto; /* Auto width to adjust button size based on content */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Centering the button */
+#location {
+    text-align: center; /* Center the content inside the section */
+}
+
+button {
+    display: inline-block; /* Ensure it behaves like an inline element */
+    margin: 0 auto; /* Center it horizontally */
+}
+
+
+/* Optional: Make button responsive */
+@media screen and (max-width: 600px) {
+    button {
+        width: 80%; /* Make the button width 80% of the screen on mobile */
+        padding: 15px 0; /* Make the button taller on mobile */
+        font-size: 1.1em; /* Adjust font size for mobile */
+    }
+}
+
+
+
+        /* Footer */
+        /*footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #135161;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }*/
+
+        footer p{
+            color:#135161;
+        }
+
+
+
+
+
+        </style>
+    </head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Wedding Invitation Section -->
+    <section id="home">
+
+        <audio autoplay loop>
+            <source src="bckmusic.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    
+        <!-- Optional Play Button for User Interaction (if autoplay is blocked) -->
+        <button onclick="document.querySelector('audio').play()">Play Music</button>
+    
+        <h1>You're Invited!</h1>
+        <p>आदरणीय मित्रांनो आणि कुटुंबीयांनो,
+            आपल्या आयुष्यातील एक सुंदर आणि पवित्र क्षण घडत आहे.
+            [पायल राजपाल मुजमुले] आणि [शुभम राहुल इंगळे] यांच्या विवाह सोहळ्याला आपले प्रेम आणि आशीर्वाद आवश्यक आहेत.
+            त्यासाठी आम्ही आपणास सहर्ष आमंत्रित करीत आहोत, 
+            आशा आहे की, या विशेष दिवशी आपली उपस्थिती त्यांचे जीवन अधिक रंगीन आणि सुखी करेल.
+        </p>
+    </section>
+
+    <!-- Wedding Details Section -->
+    <section id="details">
+        <br><h2>लग्ना बद्धल माहिती...</h2>
+        <p><strong>Date:</strong> 06/एप्रिल/2025</p>
+        <p><strong>Time:</strong> दुपारी 1:30 वाजता </p><br>
+
+        <!-- Countdown Timer -->
+        <div id="countdown"></div>
+
+        <h2><strong>लग्न पत्रिका</strong></h2>
+        <div class="center-image">
+            <img src="img7.png" alt="Couple's photo 1">
+        </div>
+    </section>
+
+    <script>
+        // Set the wedding date (make sure the format is YYYY-MM-DDTHH:MM:SS)
+        const weddingDate = new Date("2025-04-06T13:30:00");
+
+        // Update the countdown every 1 second
+        const countdownElement = document.getElementById('countdown');
+        setInterval(function() {
+            // Get current date and time
+            const now = new Date();
+            // Find the time difference
+            const timeDiff = weddingDate - now;
+
+            // Calculate remaining time
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            // Display the remaining time
+            countdownElement.innerHTML = `फक्त काही दिवस बाकी: ${days} दिवस, ${hours} तास, ${minutes} मिनिट, ${seconds} सेकंद`;
+
+            // If the wedding has passed, show a message
+            if (timeDiff < 0) {
+                countdownElement.innerHTML = "The wedding has already happened!";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Google Maps Location -->
+    <section id="location">
+        <p><strong>लग्न मंडपाकडे येण्याचा मार्ग पाहण्यासाठी खालील क्लिक करा वर क्लिक करा...</strong></p>
+        <!-- Link to Google Maps -->
+        <a href="https://maps.app.goo.gl/BeSeHgDiXuVGnb156" target="_blank">
+            <button>क्लिक करा</button>
+        </a>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery">
+        <h2>Our Journey Together</h2>
+        <div class="gallery-container">
+            <img src="img1.jpg" alt="Couple's photo 1">
+            <img src="img2.jpg" alt="Couple's photo 2">
+            <img src="img3.jpg" alt="Couple's photo 3">
+            <img src="img4.jpg" alt="Couple's photo 4">
+            <img src="img5.jpg" alt="Couple's photo 4">
+            <img src="img6.jpg" alt="Couple's photo 4">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Devloped By: Budhabhushan Bhimrao Ujagare <br>Mobile No: 7058125293</p>
+    </footer>
+
+</body>
+</html>
+
